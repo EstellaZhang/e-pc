@@ -13,8 +13,13 @@ const router = new Router({
     // },
     {
       path:'/',
-      name:'index',
+      name:'layout',
       component: () => import('@/views/layout/layout')
+    },
+    {
+      path:'/index',
+      name:'index',
+      component: () => import('@/views/index')
     },
     // DemoRouter,
     {

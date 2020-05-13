@@ -5,11 +5,11 @@
         <navbar/>
       </el-header>
       <el-container :style="height">
-        <el-aside width="200px" class="fl">
-          <Menubar/>
+        <el-aside class="fl">
+          <sidebar/>
         </el-aside>
         <el-main>
-          main
+          <router-view/>
         </el-main>
       </el-container>
     </el-container>
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import { Navbar,Menubar } from './components';
+import { Navbar,Sidebar } from './components';
 export default {
   name:'Layout',
   components:{
     Navbar,
-    Menubar
+    Sidebar
   },
   data(){
     return{

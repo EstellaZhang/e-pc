@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "echarts": "^4.7.0",
     "element-ui": "^2.13.1",
     "sass": "^1.26.5",
     "stylus": "^0.54.7",
