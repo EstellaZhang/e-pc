@@ -6,21 +6,25 @@ Vue.use(Router)
 
 const router = new Router({
   routes:[
-    // {
-    //   path:'/',
-    //   name:'login',
-    //   component: () => import('@/views/login')
-    // },
+    {
+      path:'/login',
+      name:'login',
+      component: () => import('@/views/login')
+    },
     {
       path:'/',
       name:'layout',
-      component: () => import('@/views/layout/layout')
+      component: () => import('@/views/layout/layout'),
+      redirect:'/index',
+      children:[
+        {
+          path:'/index',
+          name:'index',
+          component: () => import('@/views/layout/index')
+        },
+      ]
     },
-    {
-      path:'/index',
-      name:'index',
-      component: () => import('@/views/index')
-    },
+    
     // DemoRouter,
     {
       path:'*',

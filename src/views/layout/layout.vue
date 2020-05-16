@@ -37,14 +37,17 @@ export default {
 
 <style lang="scss">
 .layout{
-  min-width: 500px;
+  min-width: 300px;
   .el-header {
     line-height: 60px;
     border-bottom:1px solid #bbb;
 
   }
   .el-aside {
+    overflow-x: hidden;
     height: 100%;
+    width:200px !important;
+    
   }
   
   .el-main {
